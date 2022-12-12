@@ -16,5 +16,13 @@ func main() {
 
 	e.GET("/cats/:data", handler.GetCats)
 
+	// use native go
+	e.POST("/cats", handler.AddCat)
+	// use native go
+	e.POST("/dogs", handler.AddDog)
+
+	// use three party
+	e.POST("/hamsters", handler.AddHamsters)
+
 	e.Start(":8000")
 }
